@@ -1,0 +1,15 @@
+# .github/workflows/deptools.yml
+name: Dependency scan
+on:
+  push:
+    branches: [main]
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: deptools-io/scan-action@v1
+        with:
+          project-id: ${{ vars.DEPTOOLS_PROJECT_ID }}
+          api-key: ${{ secrets.DEPTOOLS_API_KEY }}
+          wait-for-result: false         # block until completed (default: false)
