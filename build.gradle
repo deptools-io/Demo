@@ -12,7 +12,8 @@ dependencies {
   implementation 'javax.activation:activation:1.1.1'
   implementation 'com.itextpdf:itextpdf:5.5.13.5'
   implementation 'org.springframework.boot:spring-boot-starter-web:4.0.3'
-  implementation 'com.fasterxml.jackson.core:jackson-databind:2.21.2'
+  implementation 'com.fasterxml.jackson.core:jackson-databind:2.22.0'
+  implementation 'org.jgrapht:jgrapht-core:1.5.3'
 }
 
 java {
